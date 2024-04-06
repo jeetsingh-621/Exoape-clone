@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*{
+    font-family: 'roboto';
+    box-sizing: border-box;
+}
+/* .moon-video{
+    background-color: red;
+} */
