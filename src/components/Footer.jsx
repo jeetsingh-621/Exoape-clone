@@ -4,11 +4,11 @@ function Footer() {
   return (
     <div className='w-full h-[80vh] bg-[#080608] text-white py-10 pl-4 overflow-hidden sm:pl-24 sm:h-[110vh] sm:py-20'>
         <div className='w-full h-[40%] moon-video flex justify-end relative '>
-            <div className='text-6xl text-[#E0CCBB] absolute left-2 sm:text-[9.3rem] leading-none'>
+            <div className='text-5xl text-[#E0CCBB] absolute left-2 sm:text-[9.3rem] leading-none'>
                 <h2>Our</h2>
                 <h2>Story</h2>
             </div>
-            <video className='w-[72%] h-[69%] sm:w-[80%] sm:ml-[35rem] sm:h-[150%] object-cover sm:object-center object-left' muted loop autoPlay src="https://www.exoape.com/video/video-6.mp4"></video>
+            <video className='w-[72%] h-[62%] sm:w-[80%] sm:ml-[35rem] sm:h-[150%] object-cover sm:object-center object-left' muted loop autoPlay src="https://www.exoape.com/video/video-6.mp4"></video>
       
         </div>
         <div className='pl-4 w-full text-[#B5A598] pb-10 sm:mt-20'>

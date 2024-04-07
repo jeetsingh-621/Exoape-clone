@@ -38,15 +38,20 @@ function Work() {
       </p>
 
       <div className=" video w-full my-4 mt-10 h-[70vh] sm:w-[60%] sm:h-[130vh] ">
-        <div className="relative video-cont w-full h-[80%] bg-red-400 overflow-hidden">
-          <img
-            className="w-full h-full object-cover"
+        <div className="relative video-cont w-full h-[80%]  overflow-hidden">
+          <motion.img data-scroll 
+          data-scroll-speed='.1'
+          initial={{opacity:1}}
+          whileHover={{opacity:0}}
+            className="w-full h-full object-cover sm:absolute sm:top-0 sm:left-0 z-[2]"
             src="https://a.storyblok.com/f/133769/2400x2990/540fb12941/columbia-pictures-thumbnail.jpg/m/1300x1620/filters:quality(90)"
             alt=""
           />
 
-          <video
-            className="w-full h-full block sm:hidden   object-cover absolute top-0 scale-[1]"
+          <video 
+            data-scroll 
+            data-scroll-speed='.1'
+            className="w-full h-full block sm:z-[1]   object-cover absolute top-0 scale-[1]"
             autoPlay
             muted
             loop
@@ -54,8 +59,10 @@ function Work() {
           ></video>
         </div>
         <div className="video-text mt-4 tracking-tight sm:flex gap-2 ">
-          <h2 className="">Columbia pictures</h2>
-          <p className=" text-zinc-900 sm:font-[500] sm:text-zinc-400 font-[350] text-md">
+          <h2 className="" data-scroll 
+          data-scroll-speed='.1'>Columbia pictures</h2>
+          <p className=" text-zinc-900 sm:font-[500] sm:text-zinc-400 font-[350] text-md" data-scroll 
+          data-scroll-speed='.1'>
             {" "}
             Celebrating a Century of cinema
           </p>
@@ -63,15 +70,22 @@ function Work() {
       </div>
 
       <div className=" video w-full my-2 h-[70vh] sm:w-[27%] sm:h-[90vh] sm:absolute sm:right-[8%]  sm:top-[32%] ">
-        <div className="relative video-cont w-full h-[80%] bg-red-400 overflow-hidden">
-          <img
-            className="w-full h-full object-cover"
+        <div className="relative video-cont w-full h-[80%] overflow-hidden">
+          < motion.img 
+
+          data-scroll 
+          data-scroll-speed='.1'
+          initial={{opacity:1}}
+          whileHover={{opacity:0}}
+            className="w-full h-full object-cover sm:absolute sm:top-0 sm:left-0 z-[2]"
             src="https://a.storyblok.com/f/133769/2400x2990/b66359da25/rino-pelle-hero.jpg/m/1300x1620/filters:quality(90)"
             alt=""
           />
 
           <video
-            className="w-full h-full sm:hidden   object-cover absolute top-0 scale-[1]"
+            data-scroll 
+            data-scroll-speed='.1'
+            className="w-full h-full z-[1]   object-cover absolute top-0 scale-[1]"
             autoPlay
             muted
             loop
@@ -79,22 +93,30 @@ function Work() {
           ></video>
         </div>
         <div className="video-text mt-4 tracking-tight sm:flex gap-2 ">
-          <h2 className="">Rino &amp; Pelle</h2>
-          <p className=" text-zinc-900 sm:font-[500] sm:text-zinc-400 font-[350] text-md">
+          <h2 className="" data-scroll 
+          data-scroll-speed='.1'>Rino &amp; Pelle</h2>
+          <p className=" text-zinc-900 sm:font-[500] sm:text-zinc-400 font-[350] text-md" data-scroll 
+          data-scroll-speed='.1'>
             Effortless chic lifestyle
           </p>
         </div>
       </div>
       <div className=" video w-full my-2 h-[70vh] sm:w-[35%] sm:h-[120vh] sm:absolute sm:right-[18%] sm:top-[58%] ">
-        <div className="relative video-cont w-full h-[80%] bg-red-400 overflow-hidden">
-          <img
-            className="w-full h-full object-cover"
+        <div className="relative video-cont w-full h-[80%] overflow-hidden">
+          <motion.img
+            initial={{opacity:1}}
+            whileHover={{opacity:0}} 
+          data-scroll 
+          data-scroll-speed='.1'
+            className="w-full h-full object-cover sm:absolute sm:top-0 sm:left-0 z-[2]"
             src="https://a.storyblok.com/f/133769/2400x2990/3e8f8d08f7/aebele-interiors-hero.jpg/m/1100x1370/filters:quality(90)"
             alt=""
           />
 
-          <video
-            className="w-full h-full sm:hidden   object-cover absolute top-0 scale-[1]"
+          <video 
+            data-scroll 
+            data-scroll-speed='.1'
+            className="w-full h-full sm:z-[1]  object-cover absolute top-0 scale-[1]"
             autoPlay
             muted
             loop
@@ -102,22 +124,30 @@ function Work() {
           ></video>
         </div>
         <div className="video-text mt-4 tracking-tight sm:flex gap-2 ">
-          <h2 className=""> Aebele Interiors</h2>
-          <p className=" text-zinc-900 sm:font-[500] sm:text-zinc-400 font-[350] text-md">
+          <h2 className="" data-scroll 
+          data-scroll-speed='.1'>  Aebele Interiors</h2>
+          <p className=" text-zinc-900 sm:font-[500] sm:text-zinc-400 font-[350] text-md" data-scroll 
+          data-scroll-speed='.1'>
             Luxurious design experience
           </p>
         </div>
       </div>
       <div className=" video w-full my-2 h-[70vh] sm:w-[20%] sm:h-[60vh] sm:absolute sm:top-[83%] sm:left-[20%]">
-        <div className="relative video-cont w-full h-[80%] bg-red-400 overflow-hidden">
-          <img
-            className="w-full h-full object-cover"
+        <div className="relative video-cont w-full h-[80%] overflow-hidden">
+          <motion.img 
+            initial={{opacity:1}}
+            whileHover={{opacity:0}}
+          data-scroll 
+          data-scroll-speed='.1'
+            className="w-full h-full object-cover sm:absolute sm:top-0 sm:left-0 z-[2]"
             src="https://a.storyblok.com/f/133769/2400x2990/20d07e6f0c/pixelflakes-hero.jpg/m/1300x1620/filters:quality(90)"
             alt=""
           />
 
-          <video
-            className="w-full h-full sm:hidden   object-cover absolute top-0 scale-[1]"
+          <video 
+            data-scroll 
+            data-scroll-speed='.1'
+            className="w-full h-full sm:z-[1]   object-cover absolute top-0 scale-[1]"
             autoPlay
             muted
             loop
@@ -125,8 +155,10 @@ function Work() {
           ></video>
         </div>
         <div className="video-text mt-4 tracking-tight sm:flex gap-2 ">
-          <h2 className="">Pixelflakes</h2>
-          <p className=" text-zinc-900 sm:font-[500] sm:text-zinc-400 font-[350] text-md">
+          <h2 className="" data-scroll 
+          data-scroll-speed='.1'>Pixelflakes</h2>
+          <p className=" text-zinc-900 sm:font-[500] sm:text-zinc-400 font-[350] text-md " data-scroll 
+          data-scroll-speed='.1'>
             Architectural marketing agency
           </p>
         </div>

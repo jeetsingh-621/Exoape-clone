@@ -1,8 +1,50 @@
-import React from 'react'
+import ScrollTrigger from 'gsap/ScrollTrigger';
+import { Power4, gsap } from 'gsap/all';
+import React, { useEffect } from 'react'
+import { useRef } from 'react'
 
 function Play() {
+  
+  const parent = useRef(null);
+  const videodiv = useRef(null);
+  const reel = useRef(null);
+  const play = useRef(null);
+ 
+
+  useEffect(()=>{
+    gsap.registerPlugin(ScrollTrigger);
+    var tl= gsap.timeline({
+      scrollTrigger:{
+        trigger:parent.current,
+        top: '0 0',
+        pin:true,
+        scrub: 1
+        // markers: true,
+    }
+   })
+    tl.to(videodiv.current,{
+      width:'101%',
+      height:'101%',
+      ease:Power4
+    },'a')
+    // 'a' esko khte h flag fir dono ek sath chalege sdo div ko tl ki jgh use na kreke ek sath chalne h to 
+    tl.to( play.current,{
+      x:"-80%",
+      scale:1.2,
+      ease:Power4
+    }, 'a' )
+    tl.to( reel.current,{
+      x:"80%",
+      scale:1.2,
+
+      ease:Power4
+    }, 'a' )
+
+      
+    
+  })
   return (
-    <div className='w-full h-[100vh] bg-black py-20  text-zinc-300 relative'>
+    <div ref={parent} className='w-full h-[100vh] bg-black py-20  text-zinc-300 relative'>
       <div className="motion mb-14 flex items-center justify-center gap-2 text-sm">
       <svg
           viewBox="0 0 12 12"
@@ -20,12 +62,12 @@ function Play() {
         <h2>Work in motion</h2>
       </div>
 
-      <div className="video w-full h-[70%] flex justify-center items-center">
-        <div className="heading flex gap-32 sm:text-[9.4rem] sm:gap-[36rem] text-5xl capitalize z-10">
-          <h2>play</h2>
-          <h2>reel</h2>
+      <div  className="video w-full h-[70%] flex justify-center items-center">
+        <div className="heading flex gap-32 sm:text-[9.4rem] sm:gap-[28rem] text-5xl capitalize z-10">
+          <h2 ref={play}>play</h2>
+          <h2 ref={reel}>reel</h2>
         </div>
-        <div className="video-play w-[50%] sm:w-[30%] bg-red-400 absolute">
+        <div ref={videodiv} className="video-play w-[50%] sm:w-[30%] bg-red-400 absolute">
         <video muted autoPlay loop  className='w-full  h-full object-cover' src="https://player.vimeo.com/progressive_redirect/playback/914803778/rendition/1080p/file.mp4?loc=external&log_user=0&signature=5344c0e4fea63ca54bb433621ca0be7b9470b475583fa68b26de2b6e380a390a"></video>
         </div>
         
